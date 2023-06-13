@@ -1,5 +1,0 @@
-Usuario: casasgbc_prospectos
-
-Base de datos: casasgbc_prospectos
-
-PW:=S]JmRL[N?YE
