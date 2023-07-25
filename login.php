@@ -2,11 +2,14 @@
 session_start();
 	include("data/cont.php");
 	
-	if($_GET["a"]==1){//Variable para cerrar sesion
+	if(isset($_GET["a"])){
+		if($_GET["a"]==1){//Variable para cerrar sesion
 		session_destroy();
 		//header('Location: index.php');
-    
+		}
 	}
+	
+
 	if(isset($_POST["usname"])){// Variable para iniciar sesion de usuario registrado
 		
     $Dato=login($_POST["usname"], $_POST["psswrd"]);
