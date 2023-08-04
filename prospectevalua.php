@@ -52,13 +52,13 @@ else	{ // si sí esta la variable de sesion y aun esa en tiempo de sesion, reini
 
                 ?>
                 <div class="media-body">
-                  <h2 class="media-heading text-uppercase"><? print($fila['pros_nombre']." ".$fila['pros_apell1']." ".$fila['pros_apell2']); ?></h2>
+                  <h2 class="media-heading text-uppercase"><?PHP print($fila['pros_nombre']." ".$fila['pros_apell1']." ".$fila['pros_apell2']); ?></h2>
                   
                   <table class="table table-striped ">
                     <tbody>
                     <tr>
-                      <td><div class="<?            print($fila['pros_estatus']."\">".$fila['pros_estatus']);?> :</div>
-                        <? print($fila['pros_notas']); ?>
+                      <td><div class="<?PHP            print($fila['pros_estatus']."\">".$fila['pros_estatus']);?> :</div>
+                        <?PHP print($fila['pros_notas']); ?>
                       </td>
                     </tr>
                   </table>
@@ -72,49 +72,49 @@ else	{ // si sí esta la variable de sesion y aun esa en tiempo de sesion, reini
                     <tr>
                       <td><div class="circle blue-bg"></div></td>
                       <td>Nombre:</td>
-                      <td><? print($fila['pros_nombre']); ?></td>                    
+                      <td><?PHP print($fila['pros_nombre']); ?></td>                    
                     </tr> 
                     <tr>
                       <td><div class="circle blue-bg"></div></td>
                       <td>Primer Apellido:</td>
-                      <td><? print($fila['pros_apell1']); ?></td>                    
+                      <td><?PHP print($fila['pros_apell1']); ?></td>                    
                     </tr>  
                     <tr>
                       <td><div class="circle blue-bg"></div></td>
                       <td>Segundo Apellido:</td>
-                      <td><? print($fila['pros_apell2']); ?></td>                    
+                      <td><?PHP print($fila['pros_apell2']); ?></td>                    
                     </tr>  
                     <tr>
                       <td><div class="circle yellow-bg"></div></td>
                       <td>Calle:</td>
-                      <td><? print($fila['pros_calle']); ?></td>                    
+                      <td><?PHP print($fila['pros_calle']); ?></td>                    
                     </tr>  
                     <tr>
                       <td><div class="circle yellow-bg"></div></td>
                       <td>Número:</td>
-                      <td><? print($fila['pros_num']); ?></td>                    
+                      <td><?PHP print($fila['pros_num']); ?></td>                    
                     </tr> 
                     <tr>
                       <td><div class="circle yellow-bg"></div></td>
                       <td>Colonia:</td>
-                      <td><? print($fila['pros_col']); ?></td>                    
+                      <td><?PHP print($fila['pros_col']); ?></td>                    
                     </tr>  
                     <tr>
                       <td><div class="circle yellow-bg"></div></td>
                       <td>C.P. </td>
-                      <td><? print($fila['pros_cp']); ?></td>                    
+                      <td><?PHP print($fila['pros_cp']); ?></td>                    
                     </tr>  
                     <tr>
                       <td><div class="circle green-bg"></div></td>
                       <td>Teléfono:</td>
-                      <td><? print($fila['pros_tel']); ?></td>                    
+                      <td><?PHP print($fila['pros_tel']); ?></td>                    
                     </tr>
                     <tr>
                       <td><div class="circle green-bg"></div></td>
                       <td>RFC:</td>
-                      <td><? print($fila['pros_rfc']); ?></td>                    
+                      <td><?PHP print($fila['pros_rfc']); ?></td>                    
                     </tr> 
-                    <?  // Continua con la consulta
+                    <?PHP  // Continua con la consulta
                         }
                         else
                            print ("No hay datos disponibles");
@@ -125,7 +125,7 @@ else	{ // si sí esta la variable de sesion y aun esa en tiempo de sesion, reini
                       <td><div class="circle green-bg"></div></td>
                       <td>ARCHIVOS:</td>
                       <td>
-                        <? //Lista todos los archivos disponibles del prospecto seleccionado.
+                        <?PHP //Lista todos los archivos disponibles del prospecto seleccionado.
                           $consulta = ConsultarSQLi("select * from pr_docs Where id_prospecto = $idprosGet;");
 
                           // Mostrar resultados de la consulta
