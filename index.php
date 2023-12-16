@@ -57,6 +57,8 @@ if (isset($_POST['prosp_10'])){
         write_to_console($fileName);
         write_to_console("Ext: ".$fileExt);
         write_to_console("Nam: ".$fileNameSE);
+        write_to_console("idCryp: ".$_POST['file_04']);
+        write_to_console("idDecryp: ".$ID_User);
 
         //Si el campo de nuevo nombre no esta vacio, se reemplaza el nombre y Si no esta vacio, se le agrega el ID del usuario y un numero al azar para evitar duplicidades.
         if(!empty($UserFileName)) $newFileName= $UserFileName;
@@ -74,7 +76,7 @@ if (isset($_POST['prosp_10'])){
 
           if(move_uploaded_file($fileTmpPath, $dest_path)){
             
-            $message ='El Archivo se subio correctamente.';
+            $message ='El Archivo se subio correctamente:'.$dest_path;
             
             //Si el archivo se subio correctamente, se inserta el registro en la base de datos
             $instruccion = "INSERT INTO `pr_docs` (`id_prospecto`, `doc_nombre`, `doc_url`, `doc_estatus`) VALUES ('$ID_User','$newFileName', '$dest_path', 'activo')";
