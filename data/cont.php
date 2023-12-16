@@ -1,9 +1,10 @@
 <?php
 //*/ server setings
 define("HOST", "localhost");// El alojamiento al que deseas conectarte
-define("USER", "casasgbc_prospectos");// El nombre de usuario de la base de datos
-define("PWD", "=S]JmRL[N?YE");// La contraseña de la base de datos
-define("BDN", "casasgbc_prospectos");  // El nombre de la base de datos
+define("USER", "root");// El nombre de usuario de la base de datos
+//define("PWD", "=S]JmRL[N?YE");// La contraseña de la base de datos
+define("PWD", "");// La contraseña de la base de datos
+define("BDN", "prospectos");  // El nombre de la base de datos
 //*/
 
 $MESES = array(" ","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
