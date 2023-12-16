@@ -60,7 +60,7 @@ else	{ // si sí esta la variable de sesion y aun esa en tiempo de sesion, reini
                     <textarea class="form-control" id="file_03" name="file_03"  rows="3"></textarea>
                 </div>
               </div>
-              <input type="hidden" id="file_04" name="file_04" value="<? print(($_GET["dat"])); ?>">
+              <input type="hidden" id="file_04" name="file_04" value="<?PHP print(($_GET["dat"])); ?>">
               <div class="form-group text-right">
                 <button type="submit" class="templatemo-blue-button">Guardar</button>
                 <button onClick="Cancelar('#MsgModal');" class="templatemo-white-button">Cerrar</button>
